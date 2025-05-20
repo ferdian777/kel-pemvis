@@ -53,7 +53,7 @@ public class FormLogin extends javax.swing.JFrame {
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gui/20241225_175934-1.jpg"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gui/hr-manager.png"))); // NOI18N
 
         jLabel2.setText("EMAIL");
 
