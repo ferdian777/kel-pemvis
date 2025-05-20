@@ -4,17 +4,34 @@
  */
 package gui;
 
+import java.awt.Image;
+import javax.swing.Icon;
+import javax.swing.ImageIcon;
+import javax.swing.JLabel;
+
 /**
  *
  * @author itamr
  */
 public class halamanAdmin extends javax.swing.JFrame {
 
+    
+    public static void resizeIcon(JLabel label){
+        Icon i = label.getIcon();
+        if(i instanceof ImageIcon){
+            ImageIcon icon = (ImageIcon) i;
+            Image image = icon.getImage().getScaledInstance(label.getWidth(), label.getHeight(), Image.SCALE_SMOOTH);
+            label.setIcon(new ImageIcon(image));
+        }
+    }
     /**
      * Creates new form halamanAdmin
      */
     public halamanAdmin() {
         initComponents();
+        
+        //strecth image
+        halamanAdmin.resizeIcon(icon1);
     }
 
     /**
@@ -27,45 +44,27 @@ public class halamanAdmin extends javax.swing.JFrame {
     private void initComponents() {
 
         pnkiri = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
         pnkanan = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         pn_dasar = new javax.swing.JPanel();
         pn_utama = new javax.swing.JPanel();
+        icon1 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         pnkiri.setBackground(new java.awt.Color(255, 255, 255));
         pnkiri.setPreferredSize(new java.awt.Dimension(300, 768));
 
-        jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
-        jLabel1.setText("DASHBOARD");
-
-        jLabel2.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/dashboard.png"))); // NOI18N
-
         javax.swing.GroupLayout pnkiriLayout = new javax.swing.GroupLayout(pnkiri);
         pnkiri.setLayout(pnkiriLayout);
         pnkiriLayout.setHorizontalGroup(
             pnkiriLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnkiriLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(71, Short.MAX_VALUE))
+            .addGap(0, 300, Short.MAX_VALUE)
         );
         pnkiriLayout.setVerticalGroup(
             pnkiriLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnkiriLayout.createSequentialGroup()
-                .addGap(14, 14, 14)
-                .addGroup(pnkiriLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(pnkiriLayout.createSequentialGroup()
-                        .addGap(9, 9, 9)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(698, Short.MAX_VALUE))
+            .addGap(0, 768, Short.MAX_VALUE)
         );
 
         getContentPane().add(pnkiri, java.awt.BorderLayout.LINE_START);
@@ -89,15 +88,33 @@ public class halamanAdmin extends javax.swing.JFrame {
 
         pn_dasar.setBackground(new java.awt.Color(204, 204, 204));
 
+        icon1.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
+        icon1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/dashboard.png"))); // NOI18N
+
+        jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        jLabel1.setText("DASHBOARD");
+
         javax.swing.GroupLayout pn_utamaLayout = new javax.swing.GroupLayout(pn_utama);
         pn_utama.setLayout(pn_utamaLayout);
         pn_utamaLayout.setHorizontalGroup(
             pn_utamaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1242, Short.MAX_VALUE)
+            .addGroup(pn_utamaLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(icon1, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(1106, Short.MAX_VALUE))
         );
         pn_utamaLayout.setVerticalGroup(
             pn_utamaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 635, Short.MAX_VALUE)
+            .addGroup(pn_utamaLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(pn_utamaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(icon1, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(pn_utamaLayout.createSequentialGroup()
+                        .addGap(17, 17, 17)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(539, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout pn_dasarLayout = new javax.swing.GroupLayout(pn_dasar);
@@ -107,7 +124,7 @@ public class halamanAdmin extends javax.swing.JFrame {
             .addGroup(pn_dasarLayout.createSequentialGroup()
                 .addGap(18, 18, 18)
                 .addComponent(pn_utama, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(39, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         pn_dasarLayout.setVerticalGroup(
             pn_dasarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -161,8 +178,8 @@ public class halamanAdmin extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel icon1;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel pn_dasar;
     private javax.swing.JPanel pn_utama;
