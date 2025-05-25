@@ -111,7 +111,7 @@ public class FormInputDataKaryawan extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 36)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("~ DATA PASIEN ~");
+        jLabel1.setText("Data Karyawan");
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel2.setText("ID Karyawan");
@@ -161,7 +161,7 @@ public class FormInputDataKaryawan extends javax.swing.JFrame {
             }
         });
 
-        bexit.setText("EXIT");
+        bexit.setText("BACK");
         bexit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 bexitActionPerformed(evt);
@@ -400,7 +400,12 @@ public class FormInputDataKaryawan extends javax.swing.JFrame {
 
     private void bexitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bexitActionPerformed
         // TODO add your handling code here:
-        dispose();
+        halamanAdmin dashboard = new halamanAdmin();
+    dashboard.setVisible(true);
+    
+    // Tutup form saat ini
+    this.dispose();
+
     }//GEN-LAST:event_bexitActionPerformed
 
     private void tabelpasienMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tabelpasienMouseClicked

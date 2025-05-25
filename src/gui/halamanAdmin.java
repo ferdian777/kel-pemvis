@@ -4,34 +4,17 @@
  */
 package gui;
 
-import java.awt.Image;
-import javax.swing.Icon;
-import javax.swing.ImageIcon;
-import javax.swing.JLabel;
-
 /**
  *
  * @author itamr
  */
 public class halamanAdmin extends javax.swing.JFrame {
 
-    
-    public static void resizeIcon(JLabel label){
-        Icon i = label.getIcon();
-        if(i instanceof ImageIcon){
-            ImageIcon icon = (ImageIcon) i;
-            Image image = icon.getImage().getScaledInstance(label.getWidth(), label.getHeight(), Image.SCALE_SMOOTH);
-            label.setIcon(new ImageIcon(image));
-        }
-    }
     /**
      * Creates new form halamanAdmin
      */
     public halamanAdmin() {
         initComponents();
-        
-        //strecth image
-        halamanAdmin.resizeIcon(icon1);
     }
 
     /**
@@ -46,10 +29,8 @@ public class halamanAdmin extends javax.swing.JFrame {
         pnkiri = new javax.swing.JPanel();
         pnkanan = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
-        pn_dasar = new javax.swing.JPanel();
-        pn_utama = new javax.swing.JPanel();
-        icon1 = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
+        jPanel3 = new javax.swing.JPanel();
+        jPanel1 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -77,7 +58,7 @@ public class halamanAdmin extends javax.swing.JFrame {
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1299, Short.MAX_VALUE)
+            .addGap(0, 919, Short.MAX_VALUE)
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -86,55 +67,37 @@ public class halamanAdmin extends javax.swing.JFrame {
 
         pnkanan.add(jPanel2, java.awt.BorderLayout.PAGE_START);
 
-        pn_dasar.setBackground(new java.awt.Color(204, 204, 204));
+        jPanel3.setBackground(new java.awt.Color(204, 204, 204));
 
-        icon1.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
-        icon1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/dashboard.png"))); // NOI18N
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 882, Short.MAX_VALUE)
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 457, Short.MAX_VALUE)
+        );
 
-        jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
-        jLabel1.setText("DASHBOARD");
-
-        javax.swing.GroupLayout pn_utamaLayout = new javax.swing.GroupLayout(pn_utama);
-        pn_utama.setLayout(pn_utamaLayout);
-        pn_utamaLayout.setHorizontalGroup(
-            pn_utamaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pn_utamaLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(icon1, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
                 .addGap(18, 18, 18)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(1106, Short.MAX_VALUE))
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(19, Short.MAX_VALUE))
         );
-        pn_utamaLayout.setVerticalGroup(
-            pn_utamaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pn_utamaLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(pn_utamaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(icon1, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(pn_utamaLayout.createSequentialGroup()
-                        .addGap(17, 17, 17)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(539, Short.MAX_VALUE))
-        );
-
-        javax.swing.GroupLayout pn_dasarLayout = new javax.swing.GroupLayout(pn_dasar);
-        pn_dasar.setLayout(pn_dasarLayout);
-        pn_dasarLayout.setHorizontalGroup(
-            pn_dasarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pn_dasarLayout.createSequentialGroup()
-                .addGap(18, 18, 18)
-                .addComponent(pn_utama, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        pn_dasarLayout.setVerticalGroup(
-            pn_dasarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pn_dasarLayout.createSequentialGroup()
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
                 .addGap(16, 16, 16)
-                .addComponent(pn_utama, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(17, Short.MAX_VALUE))
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(195, Short.MAX_VALUE))
         );
 
-        pnkanan.add(pn_dasar, java.awt.BorderLayout.CENTER);
+        pnkanan.add(jPanel3, java.awt.BorderLayout.CENTER);
 
         getContentPane().add(pnkanan, java.awt.BorderLayout.CENTER);
 
@@ -178,11 +141,9 @@ public class halamanAdmin extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel icon1;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel pn_dasar;
-    private javax.swing.JPanel pn_utama;
+    private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel pnkanan;
     private javax.swing.JPanel pnkiri;
     // End of variables declaration//GEN-END:variables

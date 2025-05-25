@@ -164,7 +164,7 @@
           <Font name="Yu Gothic UI Semibold" size="36" style="1"/>
         </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
-        <Property name="text" type="java.lang.String" value="~ DATA PASIEN ~"/>
+        <Property name="text" type="java.lang.String" value="Data Karyawan"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel2">
@@ -262,7 +262,7 @@
     </Component>
     <Component class="javax.swing.JButton" name="bexit">
       <Properties>
-        <Property name="text" type="java.lang.String" value="EXIT"/>
+        <Property name="text" type="java.lang.String" value="BACK"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bexitActionPerformed"/>
